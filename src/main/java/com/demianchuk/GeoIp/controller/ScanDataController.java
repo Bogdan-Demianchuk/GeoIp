@@ -14,6 +14,7 @@ public class ScanDataController {
     private final CsvParserService csvParserService;
     private final IpRepository ipRepository;
 
+
     public ScanDataController(CsvParserService csvParserService, IpRepository ipRepository) {
         this.csvParserService = csvParserService;
         this.ipRepository = ipRepository;
@@ -21,10 +22,16 @@ public class ScanDataController {
 
     @GetMapping("/scan-data")
     public ResponseEntity putDataToDb() {
-        List<Ip> list = csvParserService.parseCsvFile("src/main/resources/static/IP2LOCATION-LITE-DB5.CSV");
-        for (Ip ip: list){
-            ipRepository.save(ip);
+        List<Ip> list = csvParserService.parseCsvFile("src/main/resources/static/IP2.CSV");
+        try {
+            for (Ip ip : list) {
+                ipRepository.save(ip);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity("Problem with data injection", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity("data in db", HttpStatus.OK);
     }
+
+
 }

@@ -1,6 +1,5 @@
 package com.demianchuk.GeoIp;
 
-import com.demianchuk.GeoIp.service.impl.LocalFileReaderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
