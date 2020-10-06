@@ -14,9 +14,4 @@ class GeoIpApplicationTests {
     void contextLoads() {
     }
 
-    @Test
-    public void onlinETesting() {
-		 scanDataController.getLocalByIp("1.0.86.0");
-
-    }
 }
