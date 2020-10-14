@@ -54,7 +54,7 @@ public class IpMapper {
         return ipResponseDot;
     }
 
-    private Long convertIpAddressToDecimal(String iPv4) {
+    public Long convertIpAddressToDecimal(String iPv4) {
         String[] ipAddressInArray = iPv4.split("\\.");
         long result = 0;
         for (int i = 0; i < ipAddressInArray.length; i++) {
