@@ -25,7 +25,6 @@ public class IpMapper {
         this.ipRepository = ipRepository;
     }
 
-
     public Ip getIpFromLine(String[] lines) {
         Ip ip = new Ip();
         ip.setIpFrom(Long.valueOf(lines[IP_FROM]));
@@ -37,7 +36,6 @@ public class IpMapper {
         ip.setLatitude(Double.valueOf(lines[LATITUDE]));
         ip.setLongitude(Double.valueOf(lines[LONGITUDE]));
         return ip;
-    }
 
     public IpResponseDot getIpResponseDotFromIPv4(String iPv4) {
         IpResponseDot ipResponseDot = new IpResponseDot();
@@ -64,4 +62,5 @@ public class IpMapper {
         }
         return result;
     }
+
 }
