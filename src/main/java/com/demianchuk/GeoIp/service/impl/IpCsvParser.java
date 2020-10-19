@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import com.demianchuk.GeoIp.mapper.IpMapper;
 import com.demianchuk.GeoIp.model.Ip;
-import com.demianchuk.GeoIp.model.dto.IpDto;
 import com.demianchuk.GeoIp.service.CsvParserService;
 import com.demianchuk.GeoIp.service.FileReaderService;
 import com.univocity.parsers.csv.CsvParser;
