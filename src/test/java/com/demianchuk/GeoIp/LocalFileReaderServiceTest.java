@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.List;
 import com.demianchuk.GeoIp.service.impl.LocalFileReaderService;
-import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +21,6 @@ public class LocalFileReaderServiceTest {
         assertEquals(actual, expected);
     }
 
-    @SneakyThrows
     @Test
     public void localFileReaderServiceUnCorrectPath(){
         Exception exception = assertThrows(RuntimeException.class, () -> {
